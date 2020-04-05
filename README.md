@@ -9,6 +9,7 @@ A content management system for generating resumes.
 - **Lead Developer**: [Felipe Fernandez](https://github.com/HeyItsFelipe)
 
 ## Latest Deployment
+The latest deployment can be viewed here: [https://floating-reef-74169.herokuapp.com/](https://floating-reef-74169.herokuapp.com/)
 
 ## Prerequisites
 
@@ -16,9 +17,9 @@ A content management system for generating resumes.
 
 ## Phase 1
 - [X] Create node/express server
-- [ ] Create sample resume data
-- [ ] Create route to get sample resume data
-- [ ] Deploy on Heroku
+- [X] Create sample resume data
+- [X] Create route to get sample resume data
+- [X] Deploy on Heroku
 
 ## Phase 2
 - [ ] Add Mongo database
