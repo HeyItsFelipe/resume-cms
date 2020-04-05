@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/HeyItsFelipe/resume-cms#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "helmet": "^3.22.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

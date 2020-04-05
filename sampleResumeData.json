@@ -1,0 +1,59 @@
+{
+    "firstName": "Felipe",
+    "lastName": "Fernandez",
+    "contact": {
+        "github": "",
+        "email": "",
+        "phone": "",
+        "linkedin": ""
+    },
+    "experience": [
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "projects": [
+                {
+                    "name": "",
+                    "url": "",
+                    "image": "",
+                    "techUsed": "",
+                    "tasks": []
+                }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "schoolName": "",
+            "address": "",
+            "yearCompleted": "",
+            "certificate": ""
+        }
+    ],
+    "organizations": [
+        {
+            "name": "",
+            "link": "",
+            "address": "",
+            "title": "",
+            "startYear": "",
+            "endYear": "",
+            "tasks": []
+        }
+    ],
+    "projects": [
+        {
+            "name": "",
+            "url": "",
+            "github": "",
+            "description": "",
+            "image": "",
+            "techUsed": []
+        }
+    ]
+}
