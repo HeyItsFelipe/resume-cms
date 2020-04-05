@@ -1,0 +1,26 @@
+{
+  "name": "resume-cms",
+  "version": "1.0.0",
+  "description": "A content management system for generating resumes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeyItsFelipe/resume-cms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeyItsFelipe/resume-cms/issues"
+  },
+  "homepage": "https://github.com/HeyItsFelipe/resume-cms#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

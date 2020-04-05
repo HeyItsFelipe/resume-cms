@@ -15,7 +15,7 @@ A content management system for generating resumes.
 ## Setup
 
 ## Phase 1
-- [ ] Create node/express server
+- [X] Create node/express server
 - [ ] Create sample resume data
 - [ ] Create route to get sample resume data
 - [ ] Deploy on Heroku
