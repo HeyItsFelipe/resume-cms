@@ -22,12 +22,12 @@ The latest deployment can be viewed here: [https://floating-reef-74169.herokuapp
 - [X] Deploy on Heroku
 
 ## Phase 2
-- [ ] Add Mongo database
-- [ ] Based on sample resume data, add additional routes
-
-## Phase 3
 - [ ] Research/Design Login
 - [ ] Create Login
+
+## Phase 3
+- [ ] Add Mongo database
+- [ ] Based on sample resume data, add additional routes
 
 ## Phase 4
 - [ ] Research/Design Dashboard
