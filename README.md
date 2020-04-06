@@ -22,8 +22,10 @@ The latest deployment can be viewed here: [https://floating-reef-74169.herokuapp
 - [X] Deploy on Heroku
 
 ## Phase 2
-- [ ] Research/Design Login
-- [ ] Create Login
+- [X] Research/Design Sign Up page
+- [X] Create Sign Up page 
+- [X] Research/Design Log In page
+- [X] Create Log In page
 
 ## Phase 3
 - [ ] Add Mongo database
