@@ -17,37 +17,22 @@
                     <div class="card-content">
                         <div class="input-field">
                             <label for="username">Username</label>
-                            <input type="text" id="username">
+                            <input type="text" id="username" onkeyup="validateInput('username', 'signup')">
                         </div><br>
                         <div class="input-field">
                             <label for="password">Password</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" onkeyup="validateInput('password', 'signup')">
                         </div>
                         <div class="input-field">
-                            <button class="btn-large signup-btn" style="width: 100%">Sign Up</button>
+                            <button class="btn-large disabled signup-btn" style="width: 100%">Sign Up</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script>
-        let submitBtn = document.getElementsByClassName('signup-btn')[0];
-
-        submitBtn.addEventListener('click', () => {
-
-            let name = document.getElementById('username').value;
-            let password = document.getElementById('password').value;
-
-            axios.post('/signup', {
-                name: name,
-                password: password
-            }).then((res) => {
-                console.log(res);
-            }).catch((err) => console.log(err));
-        });
-
-    </script>
+    <script type="text/javascript" src="/js/validate.js"></script>
+    <script type="text/javascript" src="/js/signup.js"></script>
 </body>
 
 </html>

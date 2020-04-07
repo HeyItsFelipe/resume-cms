@@ -17,37 +17,24 @@
                     <div class="card-content">
                         <div class="input-field">
                             <label for="username">Username</label>
-                            <input type="text" id="username">
+                            <input type="text" id="username" onkeyup="validateInput('username', 'login')">
+                            <span class="helper-text" data-error="Too Short"></span>
                         </div><br>
                         <div class="input-field">
                             <label for="password">Password</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" onkeyup="validateInput('password', 'login')">
+                            <span class="helper-text" data-error="Too Short"></span>
                         </div>
                         <div class="input-field">
-                            <button class="btn-large login-btn" style="width: 100%">Log In</button>
+                            <button class="btn-large disabled login-btn" style="width: 100%">Log In</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script>
-        let loginBtn = document.getElementsByClassName('login-btn')[0];
-
-        loginBtn.addEventListener('click', () => {
-
-            let name = document.getElementById('username').value;
-            let password = document.getElementById('password').value;
-
-            axios.post('/login', {
-                name: name,
-                password: password
-            }).then((res) => {
-                console.log(res);
-            }).catch((err) => console.log(err));
-        });
-
-    </script>
+    <script type="text/javascript" src="/js/validate.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
 </body>
 
 </html>
