@@ -24,13 +24,30 @@
                             <input type="password" id="password">
                         </div>
                         <div class="input-field">
-                            <button class="btn-large" style="width: 100%">Sign Up</button>
+                            <button class="btn-large signup-btn" style="width: 100%">Sign Up</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        let submitBtn = document.getElementsByClassName('signup-btn')[0];
+
+        submitBtn.addEventListener('click', () => {
+
+            let name = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            axios.post('/signup', {
+                name: name,
+                password: password
+            }).then((res) => {
+                console.log(res);
+            }).catch((err) => console.log(err));
+        });
+
+    </script>
 </body>
 
 </html>

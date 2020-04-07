@@ -24,13 +24,30 @@
                             <input type="password" id="password">
                         </div>
                         <div class="input-field">
-                            <button class="btn-large" style="width: 100%">Log In</button>
+                            <button class="btn-large login-btn" style="width: 100%">Log In</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        let loginBtn = document.getElementsByClassName('login-btn')[0];
+
+        loginBtn.addEventListener('click', () => {
+
+            let name = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            axios.post('/login', {
+                name: name,
+                password: password
+            }).then((res) => {
+                console.log(res);
+            }).catch((err) => console.log(err));
+        });
+
+    </script>
 </body>
 
 </html>

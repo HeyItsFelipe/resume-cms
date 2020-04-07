@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 const app = express();
 app.use(helmet());
+app.use(express.json());
 app.set('view engine', 'ejs');
 
 const sampleResumeData = require('./sampleResumeData');
@@ -24,6 +25,16 @@ app.get('/', (req, res) => {
 
 app.get('/signup', (req, res) => {
     res.render('pages/signup');
+});
+
+app.post('/signup', (req, res) => {
+    console.log(">>>Sign Up Data", req.body);
+    res.send('Successfully Signed Up!');
+});
+
+app.post('/login', (req, res) => {
+    console.log(">>>Log In Data", req.body);
+    res.send('Successfully Logged In!');
 });
 
 app.get('/resumes', (req, res) => {
