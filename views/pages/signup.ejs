@@ -14,25 +14,28 @@
                     <div class="card-action teal lighten-1 white-text">
                         <h2>Sign Up Form</h2>
                     </div>
-                    <div class="card-content">
+                    <form class="card-content" action="/signup" method="POST">
                         <div class="input-field">
                             <label for="username">Username</label>
-                            <input type="text" id="username" onkeyup="validateInput('username', 'signup')">
+                            <input type="text" id="username" name="username"
+                                onkeyup="validateInput('username', 'signup')">
+                            <span class="helper-text" data-error="Too Short"></span>
                         </div><br>
                         <div class="input-field">
                             <label for="password">Password</label>
-                            <input type="password" id="password" onkeyup="validateInput('password', 'signup')">
+                            <input type="password" id="password" name="password"
+                                onkeyup="validateInput('password', 'signup')">
+                            <span class="helper-text" data-error="Too Short"></span>
                         </div>
                         <div class="input-field">
                             <button class="btn-large disabled signup-btn" style="width: 100%">Sign Up</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
     </div>
     <script type="text/javascript" src="/js/validate.js"></script>
-    <script type="text/javascript" src="/js/signup.js"></script>
 </body>
 
 </html>
