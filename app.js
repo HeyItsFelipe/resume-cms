@@ -38,12 +38,12 @@ app.get('/dashboard', (req, res) => {
 
 app.post('/signup', (req, res) => {
     console.log(">>>Sign Up Data", req.body);
-    res.redirect('/dashboard');
+    res.render('pages/dashboard', { name: req.body.username });
 });
 
 app.post('/login', (req, res) => {
     console.log(">>>Log In Data", req.body);
-    res.send('Successfully Logged In!');
+    res.render('pages/dashboard', { name: req.body.username });
 });
 
 app.get('/resumes', (req, res) => {

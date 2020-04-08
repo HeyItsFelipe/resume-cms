@@ -32,7 +32,8 @@ The latest deployment can be viewed here: [https://floating-reef-74169.herokuapp
 - [X] Create Sign Up and Log In routes
 - [X] Create Mongoose user schema
 - [X] Add client side validation
-- [ ] Sign Up and Log In users through app
+- [X] Create initial dashboard
+- [X] Navigate from Sign Up/Log In to initial dashboard
 
 ## Phase 4
 - [ ] Research/Design Dashboard
