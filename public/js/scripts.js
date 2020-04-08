@@ -1,3 +1,4 @@
+
 function validateInput(inputId, page) {
     let input = document.getElementById(inputId);
     if (input.value.length < 6 && input.value !== "") {
@@ -22,3 +23,7 @@ function enableButton(page) {
 function validateSubmit(name, password) {
     return name.length > 5 && password.length > 5;
 }
+
+setTimeout(() => {
+    M.updateTextFields();
+}, 100);
