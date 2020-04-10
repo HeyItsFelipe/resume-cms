@@ -14,6 +14,14 @@
                     <div class="card-action teal lighten-1 white-text">
                         <h2>Sign Up Form</h2>
                     </div>
+
+                    <% if (userNameTaken) { %>
+                    <div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+                        Username taken, pick another.
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <% } %>
+
                     <form class="card-content" action="/signup" method="POST">
                         <div class="input-field">
                             <label for="username">Username</label>

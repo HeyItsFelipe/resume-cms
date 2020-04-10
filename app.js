@@ -3,6 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const path = require('path');
+const bcrypt = require('bcrypt');
 const app = express();
 app.use(helmet());
 app.use(express.json());
@@ -29,7 +30,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/signup', (req, res) => {
-    res.render('pages/signup');
+    res.render('pages/signup', { userNameTaken: false });
 });
 
 app.get('/dashboard', (req, res) => {
@@ -37,8 +38,22 @@ app.get('/dashboard', (req, res) => {
 });
 
 app.post('/signup', (req, res) => {
-    console.log(">>>Sign Up Data", req.body);
-    res.render('pages/dashboard', { name: req.body.username });
+    User.findOne({
+        name: req.body.username
+    }).then((user) => {
+        if (user) {
+            res.render('pages/signup', { userNameTaken: true });
+        } else {
+            let hashedPassword = bcrypt.hashSync(req.body.password, 10);
+            const newUser = new User({
+                name: req.body.username,
+                password: hashedPassword
+            });
+            newUser.save().then((user) => {
+                res.render('pages/dashboard', { name: user.name })
+            });
+        }
+    })
 });
 
 app.post('/login', (req, res) => {
