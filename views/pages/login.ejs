@@ -14,6 +14,15 @@
                     <div class="card-action teal lighten-1 white-text">
                         <h2>Log In Form</h2>
                     </div>
+
+                    <% if (notSignedUp) { %>
+                    <div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+                        You must sign up before logging in.
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <% } %>
+
+
                     <form class="card-content" action="/login" method="POST">
                         <div class="input-field">
                             <label for="username">Username</label>
