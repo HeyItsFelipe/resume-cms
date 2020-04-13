@@ -15,13 +15,26 @@
                         <h2>Log In Form</h2>
                     </div>
 
-                    <% if (notSignedUp) { %>
+                    <% if (error != '') { %>
                     <div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
-                        You must sign up before logging in.
+                        <%= error %>
                         <i class="close material-icons">close</i>
                     </div>
                     <% } %>
 
+                    <% if (success_msg != '') { %>
+                    <div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+                        <%= success_msg %>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <% } %>
+
+                    <% if (error_msg != '') { %>
+                    <div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+                        <%= error_msg %>
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <% } %>
 
                     <form class="card-content" action="/login" method="POST">
                         <div class="input-field">
@@ -29,7 +42,7 @@
                             <input type="text" id="username" name="username"
                                 onkeyup="validateInput('username', 'login')">
                             <span class="helper-text" data-error="Too Short"></span>
-                        </div><br>
+                        </div>
                         <div class="input-field">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password"

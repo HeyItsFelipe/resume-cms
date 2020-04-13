@@ -37,7 +37,7 @@ The latest deployment can be viewed here: [https://floating-reef-74169.herokuapp
 
 ## Phase 4
 - [X] Add User to database upon sign up with hashed password
-- [ ] Add ability to login user with authentication
+- [X] Add ability to login user with authentication
 - [ ] Research/Design Dashboard
 - [ ] Create Dashboard
 - [ ] Based on sample resume data, add additional routes
