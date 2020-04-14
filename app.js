@@ -87,7 +87,7 @@ app.post('/signup', (req, res) => {
                         password: hash
                     });
                     newUser.save().then((user) => {
-                        req.flash('success_msg', 'You can now log in.')
+                        req.flash('success_msg', 'Success! You can now log in.')
                         res.redirect('/');
                     }).catch((err) => console.log(err));
                 });
@@ -108,7 +108,7 @@ app.post('/login', (req, res, next) => {
 // Logout
 app.get('/logout', (req, res) => {
     req.logout();
-    req.flash('success_msg', 'You are logged out.');
+    req.flash('success_msg', 'You have logged out.');
     res.redirect('/');
 });
 

@@ -1,0 +1,27 @@
+<% if (typeof userNameTaken != 'undefined' && userNameTaken) { %>
+<div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+    Username taken, pick another.
+    <i class="close material-icons">close</i>
+</div>
+<% } %>
+
+<% if (error != '') { %>
+<div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+    <%= error %>
+    <i class="close material-icons">close</i>
+</div>
+<% } %>
+
+<% if (success_msg != '') { %>
+<div class="chip green lighten-3" style="margin-top: 20px; margin-left: 20px;">
+    <%= success_msg %>
+    <i class="close material-icons">close</i>
+</div>
+<% } %>
+
+<% if (error_msg != '') { %>
+<div class="chip yellow darken-1" style="margin-top: 20px; margin-left: 20px;">
+    <%= error_msg %>
+    <i class="close material-icons">close</i>
+</div>
+<% } %>
