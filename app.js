@@ -3,11 +3,11 @@ const express = require('express');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const path = require('path');
-const bcrypt = require('bcryptjs');
+// const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-const { ensureAuthenticated } = require('./config/auth');
+// const { ensureAuthenticated } = require('./config/auth');
 
 const app = express();
 require('./config/passport')(passport);
@@ -36,9 +36,9 @@ app.use((req, res, next) => {
 app.set('view engine', 'ejs');
 
 
-const User = require('./models/User');
+// const User = require('./models/User');
 
-const sampleResumeData = require('./sampleResumeData');
+
 const PORT = process.env.PORT || 3000;
 
 
@@ -49,73 +49,6 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 
-/** Routes **/
-
-// Login Page
-app.get('/', (req, res) => {
-    res.render('pages/login');
-});
-
-// Signup Page
-app.get('/signup', (req, res) => {
-    res.render('pages/signup', { userNameTaken: false });
-});
-
-// Dashboard Page
-app.get('/dashboard', ensureAuthenticated, (req, res) => {
-    res.render('pages/dashboard', {
-        name: req.user.name
-    });
-});
-
-// Signup
-app.post('/signup', (req, res) => {
-    User.findOne({
-        name: req.body.username
-    }).then((user) => {
-        if (user) {
-            res.render('pages/signup', { userNameTaken: true });
-        } else {
-            bcrypt.genSalt(10, (err, salt) => {
-                bcrypt.hash(req.body.password, salt, function (err, hash) {
-                    if (err) {
-                        throw err;
-                    }
-                    console.log(">>>Hash", hash);
-                    const newUser = User({
-                        name: req.body.username,
-                        password: hash
-                    });
-                    newUser.save().then((user) => {
-                        req.flash('success_msg', 'Success! You can now log in.')
-                        res.redirect('/');
-                    }).catch((err) => console.log(err));
-                });
-            });
-        }
-    });
-});
-
-// Login
-app.post('/login', (req, res, next) => {
-    passport.authenticate('local', {
-        successRedirect: '/dashboard',
-        failureRedirect: '/',
-        failureFlash: true
-    })(req, res, next);
-});
-
-// Logout
-app.get('/logout', (req, res) => {
-    req.logout();
-    req.flash('success_msg', 'You have logged out.');
-    res.redirect('/');
-});
-
-// Get Resumes
-app.get('/resumes', (req, res) => {
-    res.send(sampleResumeData);
-});
-
+app.use('/', require('./routes/routes.js'));
 
 app.listen(PORT, console.log(`Server started on PORT ${PORT}!  🎉`));
