@@ -3,11 +3,9 @@ const express = require('express');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const path = require('path');
-// const bcrypt = require('bcryptjs');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-// const { ensureAuthenticated } = require('./config/auth');
 
 const app = express();
 require('./config/passport')(passport);
@@ -34,10 +32,6 @@ app.use((req, res, next) => {
 });
 
 app.set('view engine', 'ejs');
-
-
-// const User = require('./models/User');
-
 
 const PORT = process.env.PORT || 3000;
 
