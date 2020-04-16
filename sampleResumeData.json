@@ -1,6 +1,8 @@
 [
     {
+        "id": 0,
         "resumeName": "General",
+        "status": 0,
         "firstName": "Felipe",
         "lastName": "Fernandez",
         "contact": {
