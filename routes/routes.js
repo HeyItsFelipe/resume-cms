@@ -25,6 +25,12 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => {
     });
 });
 
+router.get('/dashboard/experience', ensureAuthenticated, (req, res) => {
+    res.render('pages/experience', {
+        page: "Experience"
+    });
+});
+
 // Signup
 router.post('/signup', (req, res) => {
     User.findOne({

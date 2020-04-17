@@ -3,6 +3,8 @@
 
         <% if (typeof name != 'undefined' && name) { %>
         <h1 class="center-align">Welcome <%= name %>!</h1>
+        <% } else if(typeof page != 'undefined' && page) { %>
+        <h1 class="center-align"><%= page %></h1>
         <% } else { %>
         <h1 class="center-align">Resume CMS</h1>
         <% } %>
