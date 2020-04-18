@@ -30,8 +30,8 @@ Navigate into the cloned repo.<br />
 Type `npm install` to install dependencies.
 
 ## Run
-Navigate to the cloned repo using your terminal if not done so already.
-Type `npm run dev` to run the app. <br />
+Navigate to the cloned repo using your terminal if not done so already.<br />
+Type `npm run dev` to run the app.<br />
 On your browser, navigate to [http://localhost:3000](http://localhost:3000), which is the login page.<br />
 Navigating to [http://localhost:3000/signup](http://localhost:3000/signup), takes you to the signup page.
 
