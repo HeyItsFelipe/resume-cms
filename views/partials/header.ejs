@@ -1,12 +1,20 @@
-<header class="row">
+<% if(typeof page != 'undefined' && page) { %>
+<nav class="row white nav">
+    <div class="col s12">
+        <% if (typeof name != 'undefined' && name) { %>
+        <a href="#" class="nav__user"><%= name %></a>
+        <% } %>
+        <a href="/logout" class="right nav__logout">Log Out</a>
+    </div>
+</nav>
+<% } %>
+<header class="row header">
     <div class="col s12">
 
-        <% if (typeof name != 'undefined' && name) { %>
-        <h1 class="center-align">Welcome <%= name %>!</h1>
-        <% } else if(typeof page != 'undefined' && page) { %>
-        <h1 class="center-align"><%= page %></h1>
+        <% if(typeof page != 'undefined' && page) { %>
+        <h1 class="center-align header__title"><%= page %></h1>
         <% } else { %>
-        <h1 class="center-align">Resume CMS</h1>
+        <h1 class="center-align header__title">Resume CMS</h1>
         <% } %>
 
     </div>

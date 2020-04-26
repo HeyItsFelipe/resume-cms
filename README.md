@@ -36,29 +36,10 @@ On your browser, navigate to [http://localhost:3000](http://localhost:3000), whi
 Navigating to [http://localhost:3000/signup](http://localhost:3000/signup), takes you to the signup page.
 
 
-## Phase 1
-- [X] Create node/express server
-- [X] Create sample resume data
-- [X] Create route to get sample resume data
-- [X] Deploy on Heroku
-
-## Phase 2
-- [X] Research/Design Sign Up page
-- [X] Create Sign Up page 
-- [X] Research/Design Log In page
-- [X] Create Log In page
-
-## Phase 3
-- [X] Add Mongo database
-- [X] Create Sign Up and Log In routes
-- [X] Create Mongoose user schema
-- [X] Add client side validation
-- [X] Create initial dashboard
-- [X] Navigate from Sign Up/Log In to initial dashboard
-
-## Phase 4
-- [X] Add User to database upon sign up with hashed password
-- [X] Add ability to login user with authentication
-- [ ] Research/Design Dashboard
-- [ ] Create Dashboard
-- [ ] Based on sample resume data, add additional routes
+## TODO
+- [X] Rename dashboard file to contact and related references
+- [X] Make Log Out visible on every page
+- [X] Move Log Out to upper right
+- [X] Make User name visible on every page
+- [X] Make User name appear on upper left
+- [ ] Work on experience page

@@ -19,14 +19,16 @@ router.get('/signup', (req, res) => {
 });
 
 // Dashboard Page
-router.get('/dashboard', ensureAuthenticated, (req, res) => {
-    res.render('pages/dashboard', {
-        name: req.user.name
+router.get('/contact', ensureAuthenticated, (req, res) => {
+    res.render('pages/contact', {
+        name: req.user.name,
+        page: "Contact"
     });
 });
 
-router.get('/dashboard/experience', ensureAuthenticated, (req, res) => {
+router.get('/experience', ensureAuthenticated, (req, res) => {
     res.render('pages/experience', {
+        name: req.user.name,
         page: "Experience"
     });
 });
@@ -61,7 +63,7 @@ router.post('/signup', (req, res) => {
 // Login
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-        successRedirect: '/dashboard',
+        successRedirect: '/contact',
         failureRedirect: '/',
         failureFlash: true
     })(req, res, next);
