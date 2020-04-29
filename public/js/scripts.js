@@ -24,6 +24,21 @@ function validateSubmit(name, password) {
     return name.length > 5 && password.length > 5;
 }
 
+function startYearOptions() {
+    let selectYearDomEl = document.getElementsByClassName('start-year')[0];
+    if (selectYearDomEl) {
+        let date = new Date;
+        for (let i = 1900; i <= date.getFullYear(); i++) {
+            let optionEl = document.createElement("OPTION");
+            let optionText = document.createTextNode(i);
+            optionEl.appendChild(optionText);
+            selectYearDomEl.appendChild(optionEl);
+        }
+    }
+}
+
 setTimeout(() => {
     M.updateTextFields();
 }, 100);
+
+startYearOptions();
