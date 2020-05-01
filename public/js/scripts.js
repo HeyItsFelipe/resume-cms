@@ -31,11 +31,28 @@ function startMonthOptions() {
         selectMonthDomEl.forEach((el) => {
             for (let i = 0; i < MONTHS.length; i++) {
                 let optionEl = document.createElement("OPTION");
+                optionEl.setAttribute("value", MONTHS[i]);
                 let optionText = document.createTextNode(MONTHS[i]);
                 optionEl.appendChild(optionText);
                 el.appendChild(optionEl);
             }
-        })
+        });
+    }
+}
+
+function endMonthOptions() {
+    const MONTHS = ['Present', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let selectMonthDomEl = Array.from(document.getElementsByClassName('end-month'));
+    if (selectMonthDomEl) {
+        selectMonthDomEl.forEach((el) => {
+            for (let i = 0; i < MONTHS.length; i++) {
+                let optionEl = document.createElement("OPTION");
+                optionEl.setAttribute("value", MONTHS[i]);
+                let optionText = document.createTextNode(MONTHS[i]);
+                optionEl.appendChild(optionText);
+                el.appendChild(optionEl);
+            }
+        });
     }
 }
 
@@ -46,11 +63,29 @@ function startYearOptions() {
         selectYearDomEl.forEach((el) => {
             for (let i = 1900; i <= date.getFullYear(); i++) {
                 let optionEl = document.createElement("OPTION");
+                optionEl.setAttribute("value", i);
                 let optionText = document.createTextNode(i);
                 optionEl.appendChild(optionText);
                 el.appendChild(optionEl);
             }
-        })
+        });
+    }
+}
+
+function endYearOptions() {
+    let selectYearDomEl = Array.from(document.getElementsByClassName('end-year'));
+    console.log(selectYearDomEl);
+    if (selectYearDomEl) {
+        let date = new Date;
+        selectYearDomEl.forEach((el) => {
+            for (let i = 1900; i <= date.getFullYear(); i++) {
+                let optionEl = document.createElement("OPTION");
+                optionEl.setAttribute("value", i);
+                let optionText = document.createTextNode(i);
+                optionEl.appendChild(optionText);
+                el.appendChild(optionEl);
+            }
+        });
     }
 }
 
@@ -62,25 +97,36 @@ function addJobs() {
             let job = `
                 <div class="col s12"><h2>Job ${i}</h2></div>
                 <div class="input-field col s12">
-                    <label for="jobTitle">Title</label>
-                    <input type="text" id="jobTitle" name="jobTitle">
+                    <label for="jobTitle-${i}">Title</label>
+                    <input type="text" id="jobTitle-${i}" name="jobTitle-${i}">
                 </div>
                 <div class="input-field col s12 m6">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company">
+                    <label for="company-${i}">Company</label>
+                    <input type="text" id="company-${i}" name="company-${i}">
                 </div>
                 <div class="input-field col s12 m6">
-                    <label for="companyAddress">Company Address</label>
-                    <input type="text" id="companyAddress" name="companyAddress">
+                    <label for="companyAddress-${i}">Company Address</label>
+                    <input type="text" id="companyAddress-${i}" name="companyAddress-${i}">
                 </div>
                 <div class="input-field col s12 m6">
-                    <select class="browser-default start-month">
-                        <option value="null-month" selected>Start Month</option>
+                    <select class="browser-default start-month start-month-${i}">
+                        <option value="null" selected>Start Month</option>
                     </select>
                 </div>
                 <div class="input-field col s12 m6">
-                    <select class="browser-default start-year">
-                        <option value="null-year" selected>Start Year</option>
+                    <select class="browser-default start-year start-year-${i}">
+                        <option value="null" selected>Start Year</option>
+                    </select>
+                </div>
+                <div class="input-field col s12 m6">
+                    <select class="browser-default end-month end-month-${i}">
+                        <option value="null" selected>End Month</option>
+                    </select>
+                </div>
+                <div class="input-field col s12 m6">
+                    <select class="browser-default end-year end-year-${i}">
+                        <option value="null" selected>End Year</option>
+                        <option value="Present">Present</option>
                     </select>
                 </div>
                 <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
@@ -89,11 +135,13 @@ function addJobs() {
             `;
             jobs += job;
         }
-        let div = document.createElement('DIV');
-        div.innerHTML = jobs;
-        jobDomEl.prepend(div);
+        let jobsDiv = document.createElement('DIV');
+        jobsDiv.innerHTML = jobs;
+        jobDomEl.prepend(jobsDiv);
         startMonthOptions();
         startYearOptions();
+        endMonthOptions();
+        endYearOptions();
     }
 }
 
