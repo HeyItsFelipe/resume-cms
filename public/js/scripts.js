@@ -129,6 +129,10 @@ function addJobs() {
                         <option value="Present">Present</option>
                     </select>
                 </div>
+                <div class="input-field col s12">
+                    <textarea id="job-responsibilities-${i}" class="materialize-textarea"></textarea>
+                    <label for="job-responsibilties-${i}">Responsibilities</label>
+                </div>
                 <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
                     <hr></hr>
                 </div>
