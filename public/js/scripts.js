@@ -95,18 +95,19 @@ function addJobs() {
         let jobs = '';
         for (let i = 1; i < 6; i++) {
             let job = `
+            <div>
                 <div class="col s12"><h2>Job ${i}</h2></div>
                 <div class="input-field col s12">
-                    <label for="jobTitle-${i}">Title</label>
                     <input type="text" id="jobTitle-${i}" name="jobTitle-${i}">
+                    <label for="jobTitle-${i}">Title</label>
                 </div>
                 <div class="input-field col s12 m6">
-                    <label for="company-${i}">Company</label>
                     <input type="text" id="company-${i}" name="company-${i}">
+                    <label for="company-${i}">Company</label>
                 </div>
                 <div class="input-field col s12 m6">
-                    <label for="companyAddress-${i}">Company Address</label>
                     <input type="text" id="companyAddress-${i}" name="companyAddress-${i}">
+                    <label for="companyAddress-${i}">Company Address</label>
                 </div>
                 <div class="input-field col s12 m6">
                     <select class="browser-default start-month start-month-${i}">
@@ -136,6 +137,7 @@ function addJobs() {
                 <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
                     <hr></hr>
                 </div>
+            </div>
             `;
             jobs += job;
         }
