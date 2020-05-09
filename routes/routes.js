@@ -33,6 +33,13 @@ router.get('/experience', ensureAuthenticated, (req, res) => {
     });
 });
 
+router.get('/education', ensureAuthenticated, (req, res) => {
+    res.render('pages/education', {
+        name: req.user.name,
+        page: "Education"
+    });
+});
+
 // Signup
 router.post('/signup', (req, res) => {
     User.findOne({

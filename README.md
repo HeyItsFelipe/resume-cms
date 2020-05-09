@@ -37,9 +37,6 @@ Navigating to [http://localhost:3000/signup](http://localhost:3000/signup), take
 
 
 ## TODO
-- [X] Rename dashboard file to contact and related references
-- [X] Make Log Out visible on every page
-- [X] Move Log Out to upper right
-- [X] Make User name visible on every page
-- [X] Make User name appear on upper left
-- [ ] Work on experience page
+- [] Create education page
+- [] Create organizations page
+- [] Create projects page

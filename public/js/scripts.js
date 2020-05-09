@@ -95,7 +95,6 @@ function addJobs() {
         let jobs = '';
         for (let i = 1; i < 6; i++) {
             let job = `
-            <div>
                 <div class="col s12"><h2>Job ${i}</h2></div>
                 <div class="input-field col s12">
                     <input type="text" id="jobTitle-${i}" name="jobTitle-${i}">
@@ -137,13 +136,10 @@ function addJobs() {
                 <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
                     <hr></hr>
                 </div>
-            </div>
             `;
             jobs += job;
         }
-        let jobsDiv = document.createElement('DIV');
-        jobsDiv.innerHTML = jobs;
-        jobDomEl.prepend(jobsDiv);
+        jobDomEl.innerHTML = jobs + jobDomEl.innerHTML;
         startMonthOptions();
         startYearOptions();
         endMonthOptions();
