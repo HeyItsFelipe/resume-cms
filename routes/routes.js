@@ -40,6 +40,13 @@ router.get('/education', ensureAuthenticated, (req, res) => {
     });
 });
 
+router.get('/organizations', ensureAuthenticated, (req, res) => {
+    res.render('pages/organizations', {
+        name: req.user.name,
+        page: "Organizations"
+    });
+});
+
 // Signup
 router.post('/signup', (req, res) => {
     User.findOne({
