@@ -37,6 +37,7 @@ Navigating to [http://localhost:3000/signup](http://localhost:3000/signup), take
 
 
 ## TODO
-- [] Create education page
-- [] Create organizations page
 - [] Create projects page
+- [] Break apart scripts.js
+- [] Move css from head.ejs to css file
+- [] Comment code
