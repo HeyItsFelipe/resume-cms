@@ -47,6 +47,13 @@ router.get('/organizations', ensureAuthenticated, (req, res) => {
     });
 });
 
+router.get('/projects', ensureAuthenticated, (req, res) => {
+    res.render('pages/projects', {
+        name: req.user.name,
+        page: "Projects"
+    });
+});
+
 // Signup
 router.post('/signup', (req, res) => {
     User.findOne({
