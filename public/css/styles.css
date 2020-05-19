@@ -1,0 +1,25 @@
+.nav {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.nav__user {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.nav__logout {
+    color: #039be5;
+}
+
+.header__title {
+    font-size: 3rem;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+textarea+label {
+    z-index: -1;
+}

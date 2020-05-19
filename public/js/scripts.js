@@ -74,7 +74,6 @@ function startYearOptions() {
 
 function endYearOptions() {
     let selectYearDomEl = Array.from(document.getElementsByClassName('end-year'));
-    console.log(selectYearDomEl);
     if (selectYearDomEl) {
         let date = new Date;
         selectYearDomEl.forEach((el) => {
@@ -89,112 +88,9 @@ function endYearOptions() {
     }
 }
 
-function addOrganizations() {
-    let orgDomEl = document.getElementById('organizations');
-    if (orgDomEl) {
-        let orgs = '';
-        for (let i = 1; i < 4; i++) {
-            let org = `
-                <div class="col s12"><h2>Organization ${i}</h2></div>
-                <div class="input-field col s12">
-                    <input type="text" id="orgName-${i}" name="orgName-${i}">
-                    <label for="orgName-${i}">Name</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <input type="text" id="orgLink-${i}" name="orgLink-${i}">
-                    <label for="orgLink-${i}">Link</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <input type="text" id="orgAddress-${i}" name="orgAddress-${i}">
-                    <label for="orgAddress-${i}">Address</label>
-                </div>
-                <div class="input-field col s12">
-                    <input type="text" id="title-${i}" name="title-${i}">
-                    <label for="title-${i}">Title</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <select class="browser-default start-month start-month-${i}">
-                        <option value="null" selected>Start Month</option>
-                    </select>
-                </div>
-                <div class="input-field col s12 m6">
-                    <select class="browser-default start-year start-year-${i}">
-                        <option value="null" selected>Start Year</option>
-                    </select>
-                </div>
-                <div class="input-field col s12 m6">
-                    <select class="browser-default end-month end-month-${i}">
-                        <option value="null" selected>End Month</option>
-                    </select>
-                </div>
-                <div class="input-field col s12 m6">
-                    <select class="browser-default end-year end-year-${i}">
-                        <option value="null" selected>End Year</option>
-                        <option value="Present">Present</option>
-                    </select>
-                </div>
-                <div class="input-field col s12">
-                    <textarea id="org-responsibilities-${i}" class="materialize-textarea"></textarea>
-                    <label for="org-responsibilities-${i}">Responsibilities</label>
-                </div>
-                <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
-                    <hr></hr>
-                </div>
-            `;
-            orgs += org;
-        }
-        orgDomEl.innerHTML = orgs + orgDomEl.innerHTML;
-        startMonthOptions();
-        startYearOptions();
-        endMonthOptions();
-        endYearOptions();
-    }
-}
-
-function addProjects() {
-    let projDomEl = document.getElementById('projects');
-    if (projDomEl) {
-        let projs = '';
-        for (let i = 1; i < 4; i++) {
-            let proj = `
-                <div class="col s12"><h2>Project ${i}</h2></div>
-                <div class="input-field col s12">
-                    <input type="text" id="projName-${i}" name="projName-${i}">
-                    <label for="projName-${i}">Name</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <input type="text" id="projLink-${i}" name="projLink-${i}">
-                    <label for="projLink-${i}">Link</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <input type="text" id="projGithub-${i}" name="projGithub-${i}">
-                    <label for="projGithub-${i}">GitHub</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <input type="text" id="projImgUrl-${i}" name="projImgUrl-${i}">
-                    <label for="projImgUrl-${i}">Image Url</label>
-                </div>
-                <div class="input-field col s12">
-                    <textarea id="description-${i}" class="materialize-textarea"></textarea>
-                    <label for="description-${i}">Description</label>
-                </div>
-                <div class="col s12" style="margin-top: 16px; margin-bottom: 16px;">
-                    <hr></hr>
-                </div>
-            `;
-            projs += proj;
-        }
-        projDomEl.innerHTML = projs + projDomEl.innerHTML;
-        startMonthOptions();
-        startYearOptions();
-        endMonthOptions();
-        endYearOptions();
-    }
-}
 
 setTimeout(() => {
     M.updateTextFields();
 }, 100);
 
-addOrganizations();
-addProjects();
+

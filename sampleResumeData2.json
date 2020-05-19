@@ -1,0 +1,93 @@
+{
+    "resumeName": "General",
+    "status": 0,
+    "firstName": "Felipe",
+    "lastName": "Fernandez",
+    "contact": {
+        "email": "",
+        "phone": "",
+        "github": "",
+        "linkedin": ""
+    },
+    "experience": [
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "responsibilities": ""
+        },
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "responsibilities": ""
+        },
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "responsibilities": ""
+        },
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "responsibilities": ""
+        },
+        {
+            "title": "",
+            "company": "",
+            "address": "",
+            "startMonth": "",
+            "startYear": "",
+            "endMonth": "",
+            "endYear": "",
+            "responsibilities": ""
+        }
+    ],
+    "education": [
+        {
+            "schoolName": "",
+            "address": "",
+            "yearCompleted": "",
+            "certificate": ""
+        }
+    ],
+    "organizations": [
+        {
+            "name": "",
+            "link": "",
+            "address": "",
+            "title": "",
+            "startYear": "",
+            "endYear": "",
+            "tasks": []
+        }
+    ],
+    "projects": [
+        {
+            "name": "",
+            "url": "",
+            "github": "",
+            "description": "",
+            "image": "",
+            "techUsed": []
+        }
+    ]
+}

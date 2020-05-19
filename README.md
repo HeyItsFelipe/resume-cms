@@ -37,7 +37,7 @@ Navigating to [http://localhost:3000/signup](http://localhost:3000/signup), take
 
 
 ## TODO
-- [] Create projects page
-- [] Break apart scripts.js
-- [] Move css from head.ejs to css file
+- [] Update contact with github and linkedin
+- [] Use session storage on contact
+- [] Update sampleResumeData2.json
 - [] Comment code
