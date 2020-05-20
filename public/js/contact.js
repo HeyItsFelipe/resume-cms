@@ -22,6 +22,14 @@ function addContact() {
                 <input type="tel" id="phone" name="phone">
                 <label for="phone">Phone</label>
             </div>
+            <div class="input-field col s12 m6">
+                <input type="text" id="github" name="github">
+                <label for="github">GitHub</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input type="text" id="linkedin" name="linkedin">
+                <label for="linkedin">LinkedIn</label>
+            </div>
             <div class="input-field col s12">
         `;
         contactDomEl.innerHTML = contact + contactDomEl.innerHTML;
